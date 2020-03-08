@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7056D601-BFB7-4D2A-8A55-3DCFD77BE690}</ProjectGuid>
+    <OutputType>Module</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NicoCommentCS</RootNamespace>
+    <AssemblyName>NicoCommentCS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommentRenderer.cs" />
+    <Compile Include="DropShadow.cs" />
+    <Compile Include="Emoji.Wpf\Data.cs" />
+    <Compile Include="Emoji.Wpf\EmojiRenderer.cs" />
+    <Compile Include="Emoji.Wpf\OpenTypeFont.cs" />
+    <Compile Include="Filter.cs" />
+    <Compile Include="NiconicoComment\Comment.cs" />
+    <Compile Include="NiconicoComment\CommentPresenter.cs" />
+    <Compile Include="NiconicoComment\Primitive.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Typography.GlyphLayout\GlyphIndexList.cs" />
+    <Compile Include="Typography.GlyphLayout\GlyphLayout.cs" />
+    <Compile Include="Typography.GlyphLayout\GlyphPosition.cs" />
+    <Compile Include="Typography.GlyphLayout\GlyphSubstitution.cs" />
+    <Compile Include="Typography.GlyphLayout\MeasureStringBox.cs" />
+    <Compile Include="Typography.GlyphLayout\PixelScaleLayoutExtensions.cs" />
+    <Compile Include="Typography.GlyphLayout\UserCharToGlyphIndexMap.cs" />
+    <Compile Include="Typography.OpenFont\AdditionalInfo\AdobeGlyphList.cs" />
+    <Compile Include="Typography.OpenFont\AdditionalInfo\AdobeGlyphListForNewFont.cs" />
+    <Compile Include="Typography.OpenFont\AdditionalInfo\MacPostFormat1.cs" />
+    <Compile Include="Typography.OpenFont\AdditionalInfo\OS2_IBMFontClassParameters.cs" />
+    <Compile Include="Typography.OpenFont\Bounds.cs" />
+    <Compile Include="Typography.OpenFont\CharacterMap.cs" />
+    <Compile Include="Typography.OpenFont\Geometry.cs" />
+    <Compile Include="Typography.OpenFont\Glyph.cs" />
+    <Compile Include="Typography.OpenFont\IGlyphTranslator.cs" />
+    <Compile Include="Typography.OpenFont\IO\ByteOrderSwappingBinaryReader.cs" />
+    <Compile Include="Typography.OpenFont\OpenFontReader.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\AttachmentListTable.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\Base.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\ClassDefTable.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\COLR.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\CoverageTable.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\CPAL.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\FeatureInfo.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\FeatureList.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\GDEF.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\GlyphShapingTableEntry.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\GPOS.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\GPOS.Others.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\GSUB.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\IGlyphIndexList.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\JustificationTable.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\LigatureCaretListTable.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\MathTable.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\ScriptLang.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\ScriptList.cs" />
+    <Compile Include="Typography.OpenFont\Tables.AdvancedLayout\ScriptTable.cs" />
+    <Compile Include="Typography.OpenFont\Tables.BitmapAndSvgFonts\BitmapFontGlyphSource.cs" />
+    <Compile Include="Typography.OpenFont\Tables.BitmapAndSvgFonts\BitmapFontsCommon.cs" />
+    <Compile Include="Typography.OpenFont\Tables.BitmapAndSvgFonts\CBDT.cs" />
+    <Compile Include="Typography.OpenFont\Tables.BitmapAndSvgFonts\CBLC.cs" />
+    <Compile Include="Typography.OpenFont\Tables.BitmapAndSvgFonts\EBDT.cs" />
+    <Compile Include="Typography.OpenFont\Tables.BitmapAndSvgFonts\EBLC.cs" />
+    <Compile Include="Typography.OpenFont\Tables.BitmapAndSvgFonts\EBSC.cs" />
+    <Compile Include="Typography.OpenFont\Tables.BitmapAndSvgFonts\SvgTable.cs" />
+    <Compile Include="Typography.OpenFont\Tables.CFF\CFF.cs" />
+    <Compile Include="Typography.OpenFont\Tables.CFF\CffEvaluationEngine.cs" />
+    <Compile Include="Typography.OpenFont\Tables.CFF\CFFTable.cs" />
+    <Compile Include="Typography.OpenFont\Tables.CFF\Type2CharStringParser.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Others\HorizontalDeviceMetrics.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Others\Kern.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Others\LinearThreashold.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Others\Merge.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Others\Meta.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Others\STAT.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Others\VerticalDeviceMetrics.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Others\VerticalMetrics.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Others\VerticalMetricsHeader.cs" />
+    <Compile Include="Typography.OpenFont\Tables.TrueType\Cvt_Programs.cs" />
+    <Compile Include="Typography.OpenFont\Tables.TrueType\Gasp.cs" />
+    <Compile Include="Typography.OpenFont\Tables.TrueType\Glyf.cs" />
+    <Compile Include="Typography.OpenFont\Tables.TrueType\GlyphLocations.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Variations\AVar.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Variations\Common.ItemVariationStore.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Variations\Common.TupleVariationStore.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Variations\CVar.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Variations\FVar.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Variations\GVar.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Variations\HVar.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Variations\MVar.cs" />
+    <Compile Include="Typography.OpenFont\Tables.Variations\VVar.cs" />
+    <Compile Include="Typography.OpenFont\Tables\Cmap.cs" />
+    <Compile Include="Typography.OpenFont\Tables\Head.cs" />
+    <Compile Include="Typography.OpenFont\Tables\HorizontalHeader.cs" />
+    <Compile Include="Typography.OpenFont\Tables\HorizontalMetrics.cs" />
+    <Compile Include="Typography.OpenFont\Tables\MaxProfile.cs" />
+    <Compile Include="Typography.OpenFont\Tables\NameEntry.cs" />
+    <Compile Include="Typography.OpenFont\Tables\OS2.cs" />
+    <Compile Include="Typography.OpenFont\Tables\Post.cs" />
+    <Compile Include="Typography.OpenFont\Tables\TableEntry.cs" />
+    <Compile Include="Typography.OpenFont\Tables\TableEntryCollection.cs" />
+    <Compile Include="Typography.OpenFont\Tables\TableHeader.cs" />
+    <Compile Include="Typography.OpenFont\Tables\Utils.cs" />
+    <Compile Include="Typography.OpenFont\TrueTypeInterperter\Interpreter.cs" />
+    <Compile Include="Typography.OpenFont\TrueTypeInterperter\InvalidFontException.cs" />
+    <Compile Include="Typography.OpenFont\Typeface.cs" />
+    <Compile Include="Typography.OpenFont\WebFont\Woff2Reader.cs" />
+    <Compile Include="Typography.OpenFont\WebFont\WoffReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Typography.OpenFont\README.MD" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
