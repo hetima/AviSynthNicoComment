@@ -7,7 +7,7 @@
 
 アンケートの表示は未実装です。対応予定。
 
-release に64bitバイナリを置いてます。
+[release](https://github.com/hetima/AviSynthNicoComment/releases) に64bitバイナリを置いてます。
 
 
 ## 使い方
